@@ -1,9 +1,7 @@
-import logging, json, time
+import json, time
 from string import Template
 from elasticsearch import Elasticsearch
 from flask import request, current_app
-
-logger = logging.getLogger(__name__)
 
 # Expression to fetch toots from created_at date
 toot_date_expr=Template('''{
@@ -77,8 +75,11 @@ def main():
 
     if response:
         # Return response as json
-        logger.info(f'Response: {response}')
-        return response.json()
+        current_app.logger.info(f'Response: {response}')
+        return {
+            "status": 200,
+            "message": "ok"
+        }
     else:
         # Return fission response with internal server error
         return  {
