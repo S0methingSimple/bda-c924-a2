@@ -1,0 +1,28 @@
+include:
+- ./function/__init__.py
+- ./function/toot.py
+- ./function/requirements.txt
+- ./function/build.sh
+kind: ArchiveUploadSpec
+name: function---init---py-8vIx
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: toot
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python-api
+    namespace: ""
+  source:
+    checksum: {}
+    type: url
+    url: archive://function---init---py-8vIx
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-16T13:44:57Z"
