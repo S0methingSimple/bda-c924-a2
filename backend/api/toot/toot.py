@@ -39,8 +39,10 @@ def main():
         }
     
     # Get query params
-    query_string = request.headers['X-Fission-Full-Url'].split('?')[1]
-    query_params = dict(pair.split('=') for pair in query_string.split('&'))
+    url_query = request.headers['X-Fission-Full-Url'].split('?')
+    query_params = {}
+    if len(url_query) > 1:
+        query_params = dict(pair.split('=') for pair in url_query[1].split('&'))
 
     # Define query
     if 'start_date' in query_params and 'end_date' in query_params:
