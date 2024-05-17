@@ -24,11 +24,11 @@ def fetch_data(index, query):
         http_auth=(config('ES_USERNAME'), config('ES_PASSWORD'))
     )
 
+    response = None
     try:
-        response = es.search(index=index, body=query)
+        response = es.search(index=index, body=query, size=10000)
     except Exception as e:
         current_app.logger.error(f'Error fetching data: {e}')
-        return None
 
     return response
 
