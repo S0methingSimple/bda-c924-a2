@@ -3,49 +3,20 @@ from string import Template
 from elasticsearch import Elasticsearch
 from flask import request, current_app
 
-# Expression to fetch toots from created_at date
-toot_date_expr=Template('''{
-                "range": {
-                    "created_at": {
-                        "gte": "${date}",
-                        "lt": "${today}"
-                    }
-                }
-            }''')       
-
-# Expression to fetch all toots from index
-toot_all_expr= '''{
-    "match_all": {}
-}'''
+# Indices and their respective fields to be fetched
+INDICES = {
+    "median-house-price": { "index": "as4_median_housing_price2010_2014",  "source" : [" sa4_code", " sa4_name", " rpp_att_dwell_med_sal_prc_aud", "rpp_hse_med_sal_prc_aud", " year"]},
+    "building-approvals": { "index": "building_approvals2011-2020", "source": [" sa4_code", " sa4_name", " value_new_oth_resial_building_aud000", " value_tot_building_aud000", "value_tot_resial_building_aud000", " value_new_houses_aud000", "yr"]},
+    "economy-and-industry": { "index": "economy_and_industry_2014-2019", "source": [" sa4_code_2016", " sa4_name_2016", " rsdntl_prprty_prcs_yr_endd_30_jne_hss_mdn_sle_prce", " rsdntl_prprty_prcs_yr_endd_30_jne_attchd_dwllngs_mdn_sle_prce", " yr"]},
+    "medians-and-averages": { "index": "selected_medians_and_averages_2011_2016_2021", "source": [" SA4_MAIN11", " SA4_NAME11", " Median_rent_weekly", "yr"]},
+}
 
 def config(k):
     with open(f'/configs/default/shared-conf/{k}', 'r') as f:
         return f.read()
 
 
-def fetch_toots(es, idx, query):
-    # Fetch toots from Elasticsearch
-    try:
-        response = es.search(index=idx, body=query)
-    except Exception as e:
-        current_app.logger.error(f'Error fetching toots: {e}')
-        return None
-
-    return response
-
-def main():
-    current_app.logger.info(f'Received request: ${request.headers}')
-
-    # Get index and date from request headers
-    try:
-        idx= request.headers['X-Fission-Params-Index']
-    except KeyError:
-        current_app.logger.error('Missing Index parameter')
-        return {
-            "message": "Missing Index parameter"
-        }
-
-    current_app.logger.info(f'Sudo Index: {idx}')
+def fetch_data(index, query):
 
     # Connect to Elasticsearch
     es = Elasticsearch(
@@ -54,23 +25,47 @@ def main():
         http_auth=(config('ES_USERNAME'), config('ES_PASSWORD'))
     )
 
+    try:
+        response = es.search(index=index, body=query)
+    except Exception as e:
+        current_app.logger.error(f'Error fetching data: {e}')
+        return None
+
+    return response
+
+def main():
+
+    # Get index and date from request headers
+    try:
+        index_source = INDICES[request.headers['X-Fission-Params-Index']]
+        current_app.logger.info(f'[FETCH] SUDO Index: {index_source["index"]}')
+    except KeyError:
+        current_app.logger.error('Missing or Incorrect Index parameter')
+        return {
+            "message": "Missing or Incorrect Index parameter"
+        }
+
     # Define query
     query = {
             "query": {
                 "match_all": {}
-            }
-        }
+            },
+            "_source": index_source["source"]
+         }
 
-    # Fetch toots
-    response = fetch_toots(es, idx, query)
+    # Fetch from ES
+    response = fetch_data(index_source["index"], query)
 
     if response:
         # Return response as json
-        # current_app.logger.info(f'Response: {response}')
-        current_app.logger.info('HELLO FROM SUDO')
-        return {
-            "status": 200,
-            "message": "ok"
-        }
+        source_hits = []
+        try :
+            hits = response.get("hits").get("hits")
+            source_hits = [item["_source"] for item in hits]
+        except AttributeError:
+            current_app.logger.error('No hits found')
+            return None
+
+        return json.dumps(source_hits)
     else:
         return  None
