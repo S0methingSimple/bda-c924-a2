@@ -42,7 +42,6 @@ def main():
     except KeyError:
         current_app.logger.error('Missing Index parameter')
         return {
-            "status": 400,
             "message": "Missing Index parameter"
         }
 
@@ -75,14 +74,14 @@ def main():
 
     if response:
         # Return response as json
-        current_app.logger.info(f'Response: {response}')
-        return {
-            "status": 200,
-            "message": "ok"
-        }
+        source_hits = []
+        try :
+            hits = response.get("hits").get("hits")
+            source_hits = [toot["_source"] for toot in hits]
+        except AttributeError:
+            current_app.logger.error('No hits found')
+            return None
+
+        return json.dumps(source_hits)
     else:
-        # Return fission response with internal server error
-        return  {
-            "status": 500,
-            "message": "Internal Server Error"
-        }
+        return None
