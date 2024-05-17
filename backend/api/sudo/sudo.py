@@ -1,5 +1,4 @@
-import json, time
-from string import Template
+import json, warnings
 from elasticsearch import Elasticsearch
 from flask import request, current_app
 
@@ -34,6 +33,9 @@ def fetch_data(index, query):
     return response
 
 def main():
+
+    # Ignore es warnings
+    warnings.filterwarnings("ignore")
 
     # Get index and date from request headers
     try:
