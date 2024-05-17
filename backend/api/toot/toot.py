@@ -7,7 +7,7 @@ def config(k):
         return f.read()
 
 
-def fetch_toots(idx, query):
+def fetch_toots(idx, query, fetch_type):
     
     # Connect to Elasticsearch
     es = Elasticsearch(
@@ -18,7 +18,10 @@ def fetch_toots(idx, query):
 
     response = None
     try:
-        response = es.search(index=idx, body=query, size=10000)
+        if fetch_type == 'count':
+            response = es.count(index=idx, body=query)
+        else:
+            response = es.search(index=idx, body=query, size=10000)
     except Exception as e:
         current_app.logger.error(f'Error fetching toots: {e}')
 
@@ -39,8 +42,13 @@ def main():
         }
     
     # Get query params
-    query_string = request.headers['X-Fission-Full-Url'].split('?')[1]
-    query_params = dict(pair.split('=') for pair in query_string.split('&'))
+    url_query = request.headers['X-Fission-Full-Url'].split('?')
+    query_params = {}
+    if len(url_query) > 1:
+        query_params = dict(pair.split('=') for pair in url_query[1].split('&'))
+
+    # Check type
+    fetch_type = query_params.get('type', "count")
 
     # Define query
     if 'start_date' in query_params and 'end_date' in query_params:
@@ -55,25 +63,35 @@ def main():
                 }
             }
         }
-        current_app.logger.info(f'[FETCH] Toot Index: {idx} | Date: {start_date} - {end_date}')
+        current_app.logger.info(f'[FETCH] {fetch_type} Toot: {idx} | Date: {start_date} - {end_date}')
     else:
         query = {"query": {"match_all": {}}}
-        current_app.logger.info(f'[FETCH] Toot Index: {idx} | No Date Range ')
+        current_app.logger.info(f'[FETCH] {fetch_type} Toot: {idx} | No Date Range ')
         
 
     # Fetch toots
-    response = fetch_toots(idx, query)
+    response = fetch_toots(idx, query, fetch_type)
 
     if response:
         # Return response as json
-        source_hits = []
+        result = None
         try :
-            hits = response.get("hits").get("hits")
-            source_hits = [toot["_source"] for toot in hits]
+            if fetch_type == 'count':
+                if "count" in response: 
+                    result = {
+                        "count": response.get("count")
+                    } 
+                else:
+                    result = {
+                        "count": 0
+                    }
+            else:
+                hits = response.get("hits").get("hits")
+                result = [toot["_source"] for toot in hits]
         except AttributeError:
             current_app.logger.error('No hits found')
             return None
 
-        return json.dumps(source_hits)
+        return json.dumps(result)
     else:
         return None
