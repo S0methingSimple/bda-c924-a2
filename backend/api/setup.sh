@@ -4,7 +4,7 @@ fission env create --spec --name python-api --image fission/python-env --builder
 # Toot API 
 fission package create --spec --name toot --source ./toot/__init__.py --source ./toot/toot.py  --source ./toot/*.txt --source ./toot/*.sh --env python-api --buildcmd './build.sh'
 fission function create --spec --name toot --env python-api --pkg toot --entrypoint "toot.main" --configmap shared-conf
-fission route create --spec --name toot --function toot --method GET --url '/toot/{index}/{date:[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]}'
+fission route create --spec --name toot --function toot --method GET --url '/toot/{index}'
 
 # Sudo API 
 fission package create --spec --name sudo --source ./sudo/__init__.py --source ./sudo/sudo.py  --source ./sudo/*.txt --source ./sudo/*.sh --env python-api --buildcmd './build.sh'
