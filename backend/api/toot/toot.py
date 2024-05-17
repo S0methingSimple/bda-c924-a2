@@ -1,40 +1,33 @@
-import json, time
-from string import Template
+import json, warnings
 from elasticsearch import Elasticsearch
 from flask import request, current_app
-
-# Expression to fetch toots from created_at date
-toot_date_expr=Template('''{
-                "range": {
-                    "created_at": {
-                        "gte": "${date}",
-                        "lt": "${today}"
-                    }
-                }
-            }''')       
-
-# Expression to fetch all toots from index
-toot_all_expr= '''{
-    "match_all": {}
-}'''
 
 def config(k):
     with open(f'/configs/default/shared-conf/{k}', 'r') as f:
         return f.read()
 
 
-def fetch_toots(es, idx, query):
-    # Fetch toots from Elasticsearch
+def fetch_toots(idx, query):
+    
+    # Connect to Elasticsearch
+    es = Elasticsearch(
+        'https://elasticsearch-master.elastic.svc.cluster.local:9200',
+        verify_certs= False,
+        http_auth=(config('ES_USERNAME'), config('ES_PASSWORD'))
+    )
+
+    response = None
     try:
-        response = es.search(index=idx, body=query)
+        response = es.search(index=idx, body=query, size=10000)
     except Exception as e:
         current_app.logger.error(f'Error fetching toots: {e}')
-        return None
 
     return response
 
 def main():
-    current_app.logger.info(f'Received request: ${request.headers}')
+    
+    # Ignore es warnings
+    warnings.filterwarnings("ignore")
 
     # Get index and date from request headers
     try:
@@ -44,33 +37,32 @@ def main():
         return {
             "message": "Missing Index parameter"
         }
-
-    # Get date from request headers
-    try:
-        date= request.headers['X-Fission-Params-Date']
-    except KeyError:
-        date= None
-
-    current_app.logger.info(f'Index: {idx}, Date: {date}')
-
-    # Connect to Elasticsearch
-    es = Elasticsearch(
-        'https://elasticsearch-master.elastic.svc.cluster.local:9200',
-        verify_certs= False,
-        http_auth=(config('ES_USERNAME'), config('ES_PASSWORD'))
-    )
+    
+    # Get query params
+    query_string = request.headers['X-Fission-Full-Url'].split('?')[1]
+    query_params = dict(pair.split('=') for pair in query_string.split('&'))
 
     # Define query
-    if date is None:
-        query = {"query": {"match_all": {}}}
+    if 'start_date' in query_params and 'end_date' in query_params:
+        start_date, end_date = query_params['start_date'], query_params['end_date']
+        query = {
+            "query": {
+                "range": {
+                    "created_at": {
+                        "gte": start_date,
+                        "lt": end_date
+                    }
+                }
+            }
+        }
+        current_app.logger.info(f'[FETCH] Toot Index: {idx} | Date: {start_date} - {end_date}')
     else:
-        today = time.strftime('%Y-%m-%d')
-        # query = toot_date_expr.substitute(date=date, today=today)
-        # current_app.logger.info(f'Query: {query}')
         query = {"query": {"match_all": {}}}
+        current_app.logger.info(f'[FETCH] Toot Index: {idx} | No Date Range ')
+        
 
     # Fetch toots
-    response = fetch_toots(es, idx, query)
+    response = fetch_toots(idx, query)
 
     if response:
         # Return response as json

@@ -13,10 +13,10 @@ spec:
   ingressconfig:
     annotations: null
     host: '*'
-    path: /toot/{index}/{date}
+    path: /toot/{index}
     tls: ""
   method: ""
   methods:
   - GET
   prefix: ""
-  relativeurl: /toot/{index}/{date}
+  relativeurl: /toot/{index}
