@@ -45,8 +45,8 @@ for index_name in index_tag_pairs.keys():
     if not es.indices.exists(index=index_name):
         es.indices.create(index=index_name, body=mapping)
 
-start_date = datetime(2020, 1, 1, tzinfo=timezone.utc)
-end_date = datetime(2020, 5, 8, tzinfo=timezone.utc)
+start_date = datetime(2011, 1, 1, tzinfo=timezone.utc)
+end_date = datetime(2021, 1, 1, tzinfo=timezone.utc)
 
 start_date_str = start_date.strftime('%Y-%m-%dT%H:%M:%SZ')
 end_date_str = end_date.strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -66,6 +66,7 @@ def format_toot_for_es(toot):
 def crawl_data_by_tag(index_name, tag):
     max_id = None
     while True:
+        print(index_name, tag, max_id)
         toot_search_results = mastodon.timeline_hashtag(hashtag=tag,max_id=max_id,limit=40)
 
         if not toot_search_results:
