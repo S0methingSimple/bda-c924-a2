@@ -15,6 +15,7 @@ python-lsp-server = {version = "*", extras = ["all"]}
 scikit-learn = "*"
 scipy = "*"
 seaborn = "*"
+elasticsearch = "*"
 
 [dev-packages]
 
