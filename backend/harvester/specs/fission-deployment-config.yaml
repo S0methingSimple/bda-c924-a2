@@ -4,4 +4,4 @@
 apiVersion: fission.io/v1
 kind: DeploymentConfig
 name: harvester
-uid: f4cdda14-cafb-462c-b5f6-c3635052fe52
+uid: c1ba7c91-0cd1-48fc-a255-ea2cf7bfab85

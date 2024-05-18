@@ -3,9 +3,10 @@ from elasticsearch import Elasticsearch
 from datetime import datetime, timedelta, timezone
 
 def crawl_and_index():
+    print("Start!")
     mastodon = Mastodon(api_base_url='https://mastodon.au')
     es = Elasticsearch(
-        hosts=["https://localhost:9200"],
+        hosts=["https://elasticsearch-service:9200"],
         http_auth=('elastic', 'elastic'),
         verify_certs=False
     )
@@ -75,15 +76,16 @@ def crawl_and_index():
                 es.index(index=index_name, id=toot["id"], body=formatted_toot)
             max_id = toot_search_results[-1]["id"]
 
-    # qqqqqqqqqqindex_tag_pairs = {
-    #     "income": "所得",
-    #     "housing_price": "住宅価格",
-    #     "property_price": "不動産価格",
-    #     "rental_price": "レンタル価格",
-    #     "rent": "家賃",
-    #     "studying": "勉強する",
-    #     "visa": "ビザ",
-    #     "mortgage": "モーゲージ",
-    #     "migration": "移住",
-    #     "immigration": "移民"
-    # }
+crawl_and_index()
+# qqqqqqqqqqindex_tag_pairs = {
+#     "income": "所得",
+#     "housing_price": "住宅価格",
+#     "property_price": "不動産価格",
+#     "rental_price": "レンタル価格",
+#     "rent": "家賃",
+#     "studying": "勉強する",
+#     "visa": "ビザ",
+#     "mortgage": "モーゲージ",
+#     "migration": "移住",
+#     "immigration": "移民"
+# }

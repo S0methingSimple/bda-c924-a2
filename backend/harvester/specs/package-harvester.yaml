@@ -4,7 +4,7 @@ include:
 - ./requirements.txt
 - ./build.sh
 kind: ArchiveUploadSpec
-name: init---py-C4O9
+name: init---py-jbKL
 
 ---
 apiVersion: fission.io/v1
@@ -22,7 +22,7 @@ spec:
   source:
     checksum: {}
     type: url
-    url: archive://init---py-C4O9
+    url: archive://init---py-jbKL
 status:
   buildstatus: pending
-  lastUpdateTimestamp: "2024-05-18T05:15:27Z"
+  lastUpdateTimestamp: "2024-05-18T06:25:27Z"
