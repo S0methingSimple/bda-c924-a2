@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ipywidgets = "*"
+jupyterlab = "*"
+jupyterlab-lsp = "==5.0.1"
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+pydotplus = "*"
+python-lsp-server = {version = "*", extras = ["all"]}
+scikit-learn = "*"
+scipy = "*"
+seaborn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8.12"
