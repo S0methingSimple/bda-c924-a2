@@ -1,0 +1,11 @@
+apiVersion: fission.io/v1
+kind: TimeTrigger
+metadata:
+  creationTimestamp: null
+  name: harvester-ingest
+spec:
+  cron: 0 * * * *
+  functionref:
+    functionweights: null
+    name: harvester
+    type: name

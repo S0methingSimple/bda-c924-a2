@@ -1,0 +1,28 @@
+include:
+- ./__init__.py
+- ./harvester.py
+- ./requirements.txt
+- ./build.sh
+kind: ArchiveUploadSpec
+name: init---py-C4O9
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: harvester
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python-harvester
+    namespace: ""
+  source:
+    checksum: {}
+    type: url
+    url: archive://init---py-C4O9
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-18T05:15:27Z"
