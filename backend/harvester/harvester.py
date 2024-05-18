@@ -49,7 +49,7 @@ def crawl_and_index():
             print("Instance found", index_name)
 
     current_time = datetime.now(timezone.utc)
-    start_time = (current_time - timedelta(days=1)).replace(hour=19, minute=0, second=0, microsecond=0)
+    start_time = current_time - timedelta(hours=1)
     end_time = current_time
 
     for index_name, tag in index_tag_pairs.items():
@@ -75,3 +75,15 @@ def crawl_and_index():
                 es.index(index=index_name, id=toot["id"], body=formatted_toot)
             max_id = toot_search_results[-1]["id"]
 
+    # qqqqqqqqqqindex_tag_pairs = {
+    #     "income": "所得",
+    #     "housing_price": "住宅価格",
+    #     "property_price": "不動産価格",
+    #     "rental_price": "レンタル価格",
+    #     "rent": "家賃",
+    #     "studying": "勉強する",
+    #     "visa": "ビザ",
+    #     "mortgage": "モーゲージ",
+    #     "migration": "移住",
+    #     "immigration": "移民"
+    # }
