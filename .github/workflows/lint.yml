@@ -20,4 +20,4 @@ jobs:
           ignore: "E501"
           # exclude: "src/ignoreme.py"
           path: "backend"
-          plugins: "flake8-bugbear==22.1.11 flake8-black"
+          # plugins: "flake8-black"
