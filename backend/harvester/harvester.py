@@ -14,6 +14,8 @@ def main():
     index_tag_pairs = {
         "income": "income",
         "housing_price": "housing price",
+        "property_price": "property",
+        "rental_price": "rental",
         "rent": "rent",
         "studying": "studying",
         "visa": "visa",

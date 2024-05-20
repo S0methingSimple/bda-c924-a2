@@ -13,8 +13,8 @@ es = Elasticsearch(
 index_tag_pairs = {
     "income": "income",
     "housing_price": "housing price",
-    "property_price": "property price",
-    "rental_price": "rental price",
+    "property_price": "property",
+    "rental_price": "rental",
     "rent": "rent",
     "studying": "studying",
     "visa": "visa",
@@ -45,8 +45,10 @@ for index_name in index_tag_pairs.keys():
     if not es.indices.exists(index=index_name):
         es.indices.create(index=index_name, body=mapping)
 
-start_date = datetime(2011, 1, 1, tzinfo=timezone.utc)
-end_date = datetime(2021, 1, 1, tzinfo=timezone.utc)
+start_date = datetime(2010, 1, 1, tzinfo=timezone.utc)
+end_date = datetime(2024, 5, 1, tzinfo=timezone.utc)
+# start_date = datetime(2011, 1, 1, tzinfo=timezone.utc)
+# end_date = datetime(2023, 1, 1, tzinfo=timezone.utc)
 
 start_date_str = start_date.strftime('%Y-%m-%dT%H:%M:%SZ')
 end_date_str = end_date.strftime('%Y-%m-%dT%H:%M:%SZ')
