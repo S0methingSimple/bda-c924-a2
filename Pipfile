@@ -17,6 +17,9 @@ scipy = "*"
 seaborn = "*"
 elasticsearch = "*"
 flask = "*"
+geopandas = "*"
+plotly = "==5.22.0"
+jupyter-dash = "*"
 
 [dev-packages]
 
