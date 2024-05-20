@@ -4,3 +4,4 @@ Pipfile.loc
 .startUp.sh
 unimelb-comp90024-2024-grp-33-openrc.sh
 frontend/config.py
+frontend/.ipynb_checkpoints
