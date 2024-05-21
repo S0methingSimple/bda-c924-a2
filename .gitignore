@@ -1,5 +1,7 @@
 Pipfile
 Pipfile.lock
+.idea
+.virtual_documents
 .mrc_pw
 .startUp.sh
 unimelb-comp90024-2024-grp-33-openrc.sh
