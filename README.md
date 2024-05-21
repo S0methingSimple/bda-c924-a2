@@ -23,7 +23,7 @@ This project implements a big data architecture for analyzing housing prices and
 
 ### Frontend
 
-Fill up here
+The frontend are structured with ipynb file. Just simply run it to start analysis of data.
 
 ### Backend
 
