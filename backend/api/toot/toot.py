@@ -1,4 +1,5 @@
-import json, warnings
+import json
+import warnings
 from elasticsearch import Elasticsearch
 from flask import request, current_app
 
