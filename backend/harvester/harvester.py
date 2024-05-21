@@ -8,7 +8,7 @@ def main():
     mastodon = Mastodon(api_base_url='https://mastodon.au')
     es = Elasticsearch(
         'https://elasticsearch-master.elastic.svc.cluster.local:9200',
-        verify_certs= False,
+        verify_certs=False,
         basic_auth=('elastic', 'elastic')
     )
 
@@ -52,7 +52,6 @@ def main():
 
     current_time = datetime.now(timezone.utc)
     start_time = current_time - timedelta(days=2)
-    end_time = current_time
 
     empty_tags = []
     for index_name, tag in index_tag_pairs.items():
@@ -60,9 +59,10 @@ def main():
         while True:
             toot_search_results = mastodon.timeline_hashtag(hashtag=tag, max_id=max_id, limit=1)
             if not toot_search_results:
-                print ("No info about: ", tag)
-                empty_tags.append("NO"+tag)
+                print("No info about: ", tag)
+                empty_tags.append("NO" + tag)
                 break
+
             found_valid_toot = False
             for toot in toot_search_results:
                 created_at = toot['created_at']
@@ -94,7 +94,7 @@ def main():
 
     return " ".join(empty_tags)
 
-# qqqqqqqqqqindex_tag_pairs = {
+# Japan_index_tag_pairs = {
 #     "income": "所得",
 #     "housing_price": "住宅価格",
 #     "property_price": "不動産価格",

@@ -53,6 +53,7 @@ end_date = datetime(2024, 5, 1, tzinfo=timezone.utc)
 start_date_str = start_date.strftime('%Y-%m-%dT%H:%M:%SZ')
 end_date_str = end_date.strftime('%Y-%m-%dT%H:%M:%SZ')
 
+
 def format_toot_for_es(toot):
     return {
         "id": toot["id"],
@@ -65,11 +66,12 @@ def format_toot_for_es(toot):
         "tags": [tag["name"] for tag in toot["tags"]]
     }
 
+
 def crawl_data_by_tag(index_name, tag):
     max_id = None
     while True:
         print(index_name, tag, max_id)
-        toot_search_results = mastodon.timeline_hashtag(hashtag=tag,max_id=max_id,limit=40)
+        toot_search_results = mastodon.timeline_hashtag(hashtag=tag, max_id=max_id, limit=40)
 
         if not toot_search_results:
             break
@@ -86,6 +88,7 @@ def crawl_data_by_tag(index_name, tag):
             es.index(index=index_name, id=toot_id, body=formatted_toot)
 
         max_id = toot_search_results[-1]["id"]
+
 
 for index_name, tag in index_tag_pairs.items():
     crawl_data_by_tag(index_name, tag)

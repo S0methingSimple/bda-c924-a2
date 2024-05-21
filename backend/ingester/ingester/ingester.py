@@ -1,6 +1,7 @@
 from aiokafka import AIOKafkaConsumer
 import asyncio
 
+
 async def consume():
     consumer = AIOKafkaConsumer(
         'my_topic', 'my_other_topic',

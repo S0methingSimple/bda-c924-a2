@@ -30,6 +30,8 @@ if not es.indices.exists(index=index_name):
     es.indices.create(index=index_name, body=mapping)
 
 # Function to generate batches from the JSON file
+
+
 def generate_docs_in_batches(json_file, batch_size=1000):
     batch = []
     line_count = 0
@@ -70,6 +72,7 @@ def generate_docs_in_batches(json_file, batch_size=1000):
     # Yield any remaining documents
     if batch:
         yield batch
+
 
 # Perform bulk upload to Elasticsearch in batches
 for batch in generate_docs_in_batches(file_path):
