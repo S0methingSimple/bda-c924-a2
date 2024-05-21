@@ -2,6 +2,7 @@ from mastodon import Mastodon
 from elasticsearch import Elasticsearch
 from datetime import datetime, timedelta, timezone
 
+
 def main():
     print("Start!")
     mastodon = Mastodon(api_base_url='https://mastodon.au')
