@@ -32,9 +32,33 @@ The backend of the project is deployed entirely with Fission specification, the 
 1. Install the required helm charts, refer to installation guide [here](https://gitlab.unimelb.edu.au/feit-comp90024/comp90024/-/blob/master/installation/README.md).
 2. Batch ingest the data of the project
 
-    ``` bash
-    TODO fill here!!
-    ```
+   1. List all index in Elasticsearch
+        ``` bash
+      (
+          cd ./backend/batch
+          python3 ShowIndexList.py
+      )
+      ```
+   2. Update Mastodon data to Elasticsearch manually
+      1. Need manually change the start and end date (line 48&49)as you want
+           ``` bash 
+         start_date = datetime(2010, 1, 1, tzinfo=timezone.utc)
+         end_date = datetime(2024, 5, 1, tzinfo=timezone.utc)
+           ```
+      2. Run UpdateMastodonData.py
+         ``` bash 
+         (
+             cd ./backend/batch
+             python3 UpdateMastodonData.py
+         )
+           ```
+   3. Upload Twitter data
+      ``` bash
+      (
+          cd ./backend/batch
+          python3 pushTwitter.py
+      )
+      ```
 
 3. Update specific Elasticsearch configuration and apply them (`backend/manifest`).
 
@@ -65,4 +89,11 @@ The backend of the project is deployed entirely with Fission specification, the 
     ``` bash
     kubectl port-forward service/router -n fission 9090:80
     curl "http://127.0.0.1:9090/toot/housing_price?start_date=2023-01-01&end_date=2023-12-01&type=raw"  | jq '.'  
+    ```
+   
+7. Test harvester and show time trigger.
+
+    ``` bash
+   fission fn test --name harvester 
+   fisson timetrigger list
     ```

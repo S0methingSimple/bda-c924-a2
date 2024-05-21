@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore")
 es = Elasticsearch("https://localhost:9200", http_auth=('elastic', 'elastic'), verify_certs=False)
 
 # Path to the JSON file
-file_path = "twitter-1gb.json"
+file_path = "twitter-100gb.json"
 
 # Index name
 index_name = "twitter_data"
@@ -72,7 +72,6 @@ def generate_docs_in_batches(json_file, batch_size=1000):
     # Yield any remaining documents
     if batch:
         yield batch
-
 
 # Perform bulk upload to Elasticsearch in batches
 for batch in generate_docs_in_batches(file_path):
