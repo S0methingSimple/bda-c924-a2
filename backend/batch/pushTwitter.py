@@ -74,6 +74,8 @@ def generate_docs_in_batches(json_file, batch_size=1000):
         yield batch
 
 # Perform bulk upload to Elasticsearch in batches
+
+
 for batch in generate_docs_in_batches(file_path):
     helpers.bulk(es, batch)
 
