@@ -1,0 +1,90 @@
+grss_cptl_gns_rprtd_txpyrs_yr_endd_30_jne_by_mn, estimates_personal_income_year_ended_30_june_median_investment, ttl_prsnl_incme_wkly_prsns_agd_15_yrs_cnss_ernng_3000_pr_wk_pc, estimates_personal_income_year_ended_30_june_median_employee, sa4_code_2016, estm_prsnl_incme_yr_end_30_jne_tl_excl_gvrnmt_pns_alwncs_gni_cf, estimates_personal_income_year_ended_30_june_mean_investment, tl_prsnl_incme_wkly_prsn_agd_15_yrs_cns_erng_2000_2999_pr_wk_pc, yr, tl_prsnl_incme_wkly_prsn_agd_15_yrs_cns_erng_1000_1999_pr_wk_pc, estimates_personal_income_year_ended_30_june_mean_employee, ttl_prsnl_incme_wkly_prsns_agd_15_yrs_cnss_ernng_1_499_pr_wk_pc, sa4_name_2016, tl_prsnl_incme_wkly_prsn_agd_15_yrs_cns_erng_500_999_pr_wk_pc, grss_cptl_gns_rprtd_txpyrs_yr_endd_30_jne_by_mdn
+null,null,null,null,"101",null,null,null,2019,null,null,null,"Capital Region",null,null
+null,null,null,null,"102",null,null,null,2019,null,null,null,"Central Coast",null,null
+null,null,null,null,"103",null,null,null,2019,null,null,null,"Central West",null,null
+null,null,null,null,"104",null,null,null,2019,null,null,null,"Coffs Harbour - Grafton",null,null
+null,null,null,null,"105",null,null,null,2019,null,null,null,"Far West and Orana",null,null
+null,null,null,null,"106",null,null,null,2019,null,null,null,"Hunter Valley exc Newcastle",null,null
+null,null,null,null,"107",null,null,null,2019,null,null,null,"Illawarra",null,null
+null,null,null,null,"108",null,null,null,2019,null,null,null,"Mid North Coast",null,null
+null,null,null,null,"109",null,null,null,2019,null,null,null,"Murray",null,null
+null,null,null,null,"110",null,null,null,2019,null,null,null,"New England and North West",null,null
+null,null,null,null,"111",null,null,null,2019,null,null,null,"Newcastle and Lake Macquarie",null,null
+null,null,null,null,"112",null,null,null,2019,null,null,null,"Richmond - Tweed",null,null
+null,null,null,null,"113",null,null,null,2019,null,null,null,"Riverina",null,null
+null,null,null,null,"114",null,null,null,2019,null,null,null,"Southern Highlands and Shoalhaven",null,null
+null,null,null,null,"115",null,null,null,2019,null,null,null,"Sydney - Baulkham Hills and Hawkesbury",null,null
+null,null,null,null,"116",null,null,null,2019,null,null,null,"Sydney - Blacktown",null,null
+null,null,null,null,"117",null,null,null,2019,null,null,null,"Sydney - City and Inner South",null,null
+null,null,null,null,"118",null,null,null,2019,null,null,null,"Sydney - Eastern Suburbs",null,null
+null,null,null,null,"119",null,null,null,2019,null,null,null,"Sydney - Inner South West",null,null
+null,null,null,null,"120",null,null,null,2019,null,null,null,"Sydney - Inner West",null,null
+null,null,null,null,"121",null,null,null,2019,null,null,null,"Sydney - North Sydney and Hornsby",null,null
+null,null,null,null,"122",null,null,null,2019,null,null,null,"Sydney - Northern Beaches",null,null
+null,null,null,null,"123",null,null,null,2019,null,null,null,"Sydney - Outer South West",null,null
+null,null,null,null,"124",null,null,null,2019,null,null,null,"Sydney - Outer West and Blue Mountains",null,null
+null,null,null,null,"125",null,null,null,2019,null,null,null,"Sydney - Parramatta",null,null
+null,null,null,null,"126",null,null,null,2019,null,null,null,"Sydney - Ryde",null,null
+null,null,null,null,"127",null,null,null,2019,null,null,null,"Sydney - South West",null,null
+null,null,null,null,"128",null,null,null,2019,null,null,null,"Sydney - Sutherland",null,null
+null,null,null,null,"201",null,null,null,2019,null,null,null,"Ballarat",null,null
+null,null,null,null,"202",null,null,null,2019,null,null,null,"Bendigo",null,null
+null,null,null,null,"203",null,null,null,2019,null,null,null,"Geelong",null,null
+null,null,null,null,"204",null,null,null,2019,null,null,null,"Hume",null,null
+null,null,null,null,"205",null,null,null,2019,null,null,null,"Latrobe - Gippsland",null,null
+null,null,null,null,"206",null,null,null,2019,null,null,null,"Melbourne - Inner",null,null
+null,null,null,null,"207",null,null,null,2019,null,null,null,"Melbourne - Inner East",null,null
+null,null,null,null,"208",null,null,null,2019,null,null,null,"Melbourne - Inner South",null,null
+null,null,null,null,"209",null,null,null,2019,null,null,null,"Melbourne - North East",null,null
+null,null,null,null,"210",null,null,null,2019,null,null,null,"Melbourne - North West",null,null
+null,null,null,null,"211",null,null,null,2019,null,null,null,"Melbourne - Outer East",null,null
+null,null,null,null,"212",null,null,null,2019,null,null,null,"Melbourne - South East",null,null
+null,null,null,null,"213",null,null,null,2019,null,null,null,"Melbourne - West",null,null
+null,null,null,null,"214",null,null,null,2019,null,null,null,"Mornington Peninsula",null,null
+null,null,null,null,"215",null,null,null,2019,null,null,null,"North West",null,null
+null,null,null,null,"216",null,null,null,2019,null,null,null,"Shepparton",null,null
+null,null,null,null,"217",null,null,null,2019,null,null,null,"Warrnambool and South West",null,null
+null,null,null,null,"301",null,null,null,2019,null,null,null,"Brisbane - East",null,null
+null,null,null,null,"302",null,null,null,2019,null,null,null,"Brisbane - North",null,null
+null,null,null,null,"303",null,null,null,2019,null,null,null,"Brisbane - South",null,null
+null,null,null,null,"304",null,null,null,2019,null,null,null,"Brisbane - West",null,null
+null,null,null,null,"305",null,null,null,2019,null,null,null,"Brisbane Inner City",null,null
+null,null,null,null,"306",null,null,null,2019,null,null,null,"Cairns",null,null
+null,null,null,null,"307",null,null,null,2019,null,null,null,"Darling Downs - Maranoa",null,null
+null,null,null,null,"308",null,null,null,2019,null,null,null,"Central Queensland",null,null
+null,null,null,null,"309",null,null,null,2019,null,null,null,"Gold Coast",null,null
+null,null,null,null,"310",null,null,null,2019,null,null,null,"Ipswich",null,null
+null,null,null,null,"311",null,null,null,2019,null,null,null,"Logan - Beaudesert",null,null
+null,null,null,null,"312",null,null,null,2019,null,null,null,"Mackay - Isaac - Whitsunday",null,null
+null,null,null,null,"313",null,null,null,2019,null,null,null,"Moreton Bay - North",null,null
+null,null,null,null,"314",null,null,null,2019,null,null,null,"Moreton Bay - South",null,null
+null,null,null,null,"315",null,null,null,2019,null,null,null,"Queensland - Outback",null,null
+null,null,null,null,"316",null,null,null,2019,null,null,null,"Sunshine Coast",null,null
+null,null,null,null,"317",null,null,null,2019,null,null,null,"Toowoomba",null,null
+null,null,null,null,"318",null,null,null,2019,null,null,null,"Townsville",null,null
+null,null,null,null,"319",null,null,null,2019,null,null,null,"Wide Bay",null,null
+null,null,null,null,"401",null,null,null,2019,null,null,null,"Adelaide - Central and Hills",null,null
+null,null,null,null,"402",null,null,null,2019,null,null,null,"Adelaide - North",null,null
+null,null,null,null,"403",null,null,null,2019,null,null,null,"Adelaide - South",null,null
+null,null,null,null,"404",null,null,null,2019,null,null,null,"Adelaide - West",null,null
+null,null,null,null,"405",null,null,null,2019,null,null,null,"Barossa - Yorke - Mid North",null,null
+null,null,null,null,"406",null,null,null,2019,null,null,null,"South Australia - Outback",null,null
+null,null,null,null,"407",null,null,null,2019,null,null,null,"South Australia - South East",null,null
+null,null,null,null,"501",null,null,null,2019,null,null,null,"Bunbury",null,null
+null,null,null,null,"502",null,null,null,2019,null,null,null,"Mandurah",null,null
+null,null,null,null,"503",null,null,null,2019,null,null,null,"Perth - Inner",null,null
+null,null,null,null,"504",null,null,null,2019,null,null,null,"Perth - North East",null,null
+null,null,null,null,"505",null,null,null,2019,null,null,null,"Perth - North West",null,null
+null,null,null,null,"506",null,null,null,2019,null,null,null,"Perth - South East",null,null
+null,null,null,null,"507",null,null,null,2019,null,null,null,"Perth - South West",null,null
+null,null,null,null,"509",null,null,null,2019,null,null,null,"Western Australia - Wheat Belt",null,null
+null,null,null,null,"510",null,null,null,2019,null,null,null,"Western Australia - Outback (North)",null,null
+null,null,null,null,"511",null,null,null,2019,null,null,null,"Western Australia - Outback (South)",null,null
+null,null,null,null,"601",null,null,null,2019,null,null,null,"Hobart",null,null
+null,null,null,null,"602",null,null,null,2019,null,null,null,"Launceston and North East",null,null
+null,null,null,null,"603",null,null,null,2019,null,null,null,"South East",null,null
+null,null,null,null,"604",null,null,null,2019,null,null,null,"West and North West",null,null
+null,null,null,null,"701",null,null,null,2019,null,null,null,"Darwin",null,null
+null,null,null,null,"702",null,null,null,2019,null,null,null,"Northern Territory - Outback",null,null
+null,null,null,null,"801",null,null,null,2019,null,null,null,"Australian Capital Territory",null,null
+null,null,null,null,"901",null,null,null,2019,null,null,null,"Other Territories",null,null

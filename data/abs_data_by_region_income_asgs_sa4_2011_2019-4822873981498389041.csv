@@ -1,0 +1,90 @@
+grss_cptl_gns_rprtd_txpyrs_yr_endd_30_jne_by_mn, estimates_personal_income_year_ended_30_june_median_investment, ttl_prsnl_incme_wkly_prsns_agd_15_yrs_cnss_ernng_3000_pr_wk_pc, estimates_personal_income_year_ended_30_june_median_employee, sa4_code_2016, estm_prsnl_incme_yr_end_30_jne_tl_excl_gvrnmt_pns_alwncs_gni_cf, estimates_personal_income_year_ended_30_june_mean_investment, tl_prsnl_incme_wkly_prsn_agd_15_yrs_cns_erng_2000_2999_pr_wk_pc, yr, tl_prsnl_incme_wkly_prsn_agd_15_yrs_cns_erng_1000_1999_pr_wk_pc, estimates_personal_income_year_ended_30_june_mean_employee, ttl_prsnl_incme_wkly_prsns_agd_15_yrs_cnss_ernng_1_499_pr_wk_pc, sa4_name_2016, tl_prsnl_incme_wkly_prsn_agd_15_yrs_cns_erng_500_999_pr_wk_pc, grss_cptl_gns_rprtd_txpyrs_yr_endd_30_jne_by_mdn
+31461,358,null,44678,"101",0.457,7072,null,2015,null,52350,null,"Capital Region",null,3740
+39914,249,null,44668,"102",0.452,6155,null,2015,null,52702,null,"Central Coast",null,4027
+27563,304,null,43689,"103",0.465,6647,null,2015,null,51721,null,"Central West",null,3129
+31426,330,null,38010,"104",0.478,5749,null,2015,null,44526,null,"Coffs Harbour - Grafton",null,3223
+27699,281,null,42441,"105",0.468,6682,null,2015,null,48551,null,"Far West and Orana",null,2953
+42699,244,null,46577,"106",0.473,5484,null,2015,null,58088,null,"Hunter Valley exc Newcastle",null,3505
+34541,375,null,47692,"107",0.456,6053,null,2015,null,57330,null,"Illawarra",null,4070
+25765,414,null,38165,"108",0.489,6163,null,2015,null,44637,null,"Mid North Coast",null,3886
+40227,391,null,40734,"109",0.464,8554,null,2015,null,45958,null,"Murray",null,2939
+36845,370,null,40815,"110",0.495,7495,null,2015,null,46381,null,"New England and North West",null,3270
+29966,347,null,47557,"111",0.462,6827,null,2015,null,56419,null,"Newcastle and Lake Macquarie",null,3708
+39035,389,null,37821,"112",0.483,8017,null,2015,null,44593,null,"Richmond - Tweed",null,4133
+31848,378,null,42929,"113",0.441,7627,null,2015,null,47463,null,"Riverina",null,2899
+37120,485,null,40091,"114",0.493,9412,null,2015,null,50284,null,"Southern Highlands and Shoalhaven",null,4891
+51556,509,null,54071,"115",0.498,10177,null,2015,null,68833,null,"Sydney - Baulkham Hills and Hawkesbury",null,4626
+35384,130,null,49908,"116",0.389,1589,null,2015,null,54306,null,"Sydney - Blacktown",null,3968
+88096,265,null,49669,"117",0.508,9836,null,2015,null,64059,null,"Sydney - City and Inner South",null,3922
+165407,862,null,56304,"118",0.581,25335,null,2015,null,81951,null,"Sydney - Eastern Suburbs",null,5598
+47244,386,null,45083,"119",0.45,5752,null,2015,null,52942,null,"Sydney - Inner South West",null,3638
+55576,533,null,53902,"120",0.505,10320,null,2015,null,69931,null,"Sydney - Inner West",null,4156
+66279,1151,null,60667,"121",0.575,20081,null,2015,null,90793,null,"Sydney - North Sydney and Hornsby",null,4641
+54766,787,null,52994,"122",0.545,16291,null,2015,null,77061,null,"Sydney - Northern Beaches",null,4700
+45936,154,null,49536,"123",0.4,3590,null,2015,null,55127,null,"Sydney - Outer South West",null,4825
+35709,191,null,50090,"124",0.41,4331,null,2015,null,55719,null,"Sydney - Outer West and Blue Mountains",null,4376
+36090,269,null,46177,"125",0.434,3825,null,2015,null,52844,null,"Sydney - Parramatta",null,3332
+51689,690,null,53242,"126",0.519,11101,null,2015,null,68692,null,"Sydney - Ryde",null,3595
+51806,246,null,45572,"127",0.404,3850,null,2015,null,50475,null,"Sydney - South West",null,6250
+45859,497,null,54146,"128",0.475,9762,null,2015,null,66777,null,"Sydney - Sutherland",null,3846
+28027,268,null,42332,"201",0.453,7441,null,2015,null,48254,null,"Ballarat",null,3147
+28818,321,null,42604,"202",0.453,7929,null,2015,null,48451,null,"Bendigo",null,2940
+37053,342,null,43840,"203",0.466,10056,null,2015,null,52211,null,"Geelong",null,3033
+25743,306,null,41731,"204",0.445,6965,null,2015,null,46510,null,"Hume",null,2765
+24516,341,null,41033,"205",0.475,7067,null,2015,null,50453,null,"Latrobe - Gippsland",null,2710
+101334,401,null,51018,"206",0.515,14977,null,2015,null,65246,null,"Melbourne - Inner",null,4046
+49612,1294,null,48716,"207",0.557,18360,null,2015,null,68426,null,"Melbourne - Inner East",null,4002
+56284,851,null,51683,"208",0.529,17900,null,2015,null,70150,null,"Melbourne - Inner South",null,3994
+44279,279,null,47097,"209",0.44,7225,null,2015,null,54746,null,"Melbourne - North East",null,2876
+36663,219,null,46254,"210",0.428,6361,null,2015,null,52559,null,"Melbourne - North West",null,3208
+35117,305,null,46731,"211",0.444,7156,null,2015,null,54590,null,"Melbourne - Outer East",null,2652
+32879,200,null,44495,"212",0.43,5830,null,2015,null,50236,null,"Melbourne - South East",null,3182
+28931,137,null,47464,"213",0.411,3946,null,2015,null,53140,null,"Melbourne - West",null,3210
+47871,273,null,44117,"214",0.46,10234,null,2015,null,51836,null,"Mornington Peninsula",null,3957
+24809,450,null,37674,"215",0.464,7452,null,2015,null,41702,null,"North West",null,2326
+23386,310,null,39900,"216",0.453,7576,null,2015,null,44208,null,"Shepparton",null,2599
+24914,445,null,38818,"217",0.457,8512,null,2015,null,44220,null,"Warrnambool and South West",null,2712
+29778,209,null,49947,"301",0.449,8093,null,2015,null,59829,null,"Brisbane - East",null,3506
+24769,207,null,52637,"302",0.432,6338,null,2015,null,60908,null,"Brisbane - North",null,2911
+31773,273,null,47744,"303",0.467,7970,null,2015,null,57147,null,"Brisbane - South",null,3385
+56453,438,null,53617,"304",0.52,12089,null,2015,null,69817,null,"Brisbane - West",null,3518
+61063,323,null,51913,"305",0.533,14362,null,2015,null,71536,null,"Brisbane Inner City",null,4541
+25956,221,null,40884,"306",0.451,6479,null,2015,null,48331,null,"Cairns",null,3234
+41194,235,null,40375,"307",0.504,6367,null,2015,null,46810,null,"Darling Downs - Maranoa",null,3282
+31254,115,null,52823,"308",0.476,4702,null,2015,null,68286,null,"Central Queensland",null,2512
+53642,202,null,42115,"309",0.471,10465,null,2015,null,51086,null,"Gold Coast",null,4458
+22326,91,null,46963,"310",0.404,3132,null,2015,null,51384,null,"Ipswich",null,2815
+26668,87,null,45528,"311",0.4,4205,null,2015,null,50116,null,"Logan - Beaudesert",null,2929
+22105,133,null,50741,"312",0.465,5825,null,2015,null,65140,null,"Mackay - Isaac - Whitsunday",null,3016
+33378,128,null,43413,"313",0.44,5496,null,2015,null,49821,null,"Moreton Bay - North",null,3860
+28233,127,null,51194,"314",0.428,5086,null,2015,null,59307,null,"Moreton Bay - South",null,2861
+36385,92,null,45801,"315",0.487,4160,null,2015,null,55964,null,"Queensland - Outback",null,2943
+36675,345,null,40433,"316",0.489,9892,null,2015,null,50752,null,"Sunshine Coast",null,3985
+30498,202,null,44964,"317",0.447,7244,null,2015,null,51585,null,"Toowoomba",null,3026
+22802,125,null,48455,"318",0.426,4867,null,2015,null,55400,null,"Townsville",null,2560
+22217,231,null,37968,"319",0.487,5349,null,2015,null,45541,null,"Wide Bay",null,3074
+34946,659,null,48229,"401",0.508,15910,null,2015,null,60644,null,"Adelaide - Central and Hills",null,3714
+18503,140,null,45758,"402",0.393,3769,null,2015,null,49256,null,"Adelaide - North",null,2308
+29119,257,null,47025,"403",0.438,7200,null,2015,null,53745,null,"Adelaide - South",null,2616
+23528,290,null,46423,"404",0.427,7201,null,2015,null,52478,null,"Adelaide - West",null,2806
+26997,347,null,40665,"405",0.467,8058,null,2015,null,46500,null,"Barossa - Yorke - Mid North",null,2774
+22289,232,null,45694,"406",0.447,6394,null,2015,null,55066,null,"South Australia - Outback",null,2381
+32873,347,null,37901,"407",0.463,7387,null,2015,null,42458,null,"South Australia - South East",null,3198
+29648,239,null,44897,"501",0.485,8932,null,2015,null,59176,null,"Bunbury",null,3270
+27993,177,null,50148,"502",0.491,7986,null,2015,null,67062,null,"Mandurah",null,3764
+59038,958,null,55000,"503",0.582,25333,null,2015,null,87584,null,"Perth - Inner",null,5526
+31224,169,null,52984,"504",0.438,6641,null,2015,null,62629,null,"Perth - North East",null,3699
+34971,212,null,52787,"505",0.462,8692,null,2015,null,66000,null,"Perth - North West",null,3739
+41144,184,null,51781,"506",0.454,7061,null,2015,null,62777,null,"Perth - South East",null,3379
+70657,213,null,54638,"507",0.477,9862,null,2015,null,69221,null,"Perth - South West",null,3721
+28153,507,null,41205,"509",0.493,10406,null,2015,null,50755,null,"Western Australia - Wheat Belt",null,2350
+25317,41,null,63803,"510",0.434,2872,null,2015,null,78584,null,"Western Australia - Outback (North)",null,3115
+28774,182,null,50000,"511",0.453,7948,null,2015,null,61466,null,"Western Australia - Outback (South)",null,2303
+27836,260,null,45420,"601",0.44,7067,null,2015,null,51298,null,"Hobart",null,2604
+27215,249,null,41266,"602",0.451,7089,null,2015,null,46955,null,"Launceston and North East",null,2490
+51613,252,null,37494,"603",0.474,5866,null,2015,null,42820,null,"South East",null,4138
+26223,222,null,41456,"604",0.44,5396,null,2015,null,47150,null,"West and North West",null,2449
+38227,72,null,58731,"701",0.412,4427,null,2015,null,66627,null,"Darwin",null,3424
+28630,71,null,45162,"702",0.411,3283,null,2015,null,51789,null,"Northern Territory - Outback",null,2845
+33274,266,null,62618,"801",0.416,5582,null,2015,null,68084,null,"Australian Capital Territory",null,3061
+28651,1009,null,72741,"901",0.39,7136,null,2015,null,70543,null,"Other Territories",null,4304
