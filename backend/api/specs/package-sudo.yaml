@@ -1,0 +1,28 @@
+include:
+- ./sudo/__init__.py
+- ./sudo/sudo.py
+- ./sudo/requirements.txt
+- ./sudo/build.sh
+kind: ArchiveUploadSpec
+name: sudo---init---py-FBzb
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: sudo
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python-api
+    namespace: ""
+  source:
+    checksum: {}
+    type: url
+    url: archive://sudo---init---py-FBzb
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-17T01:24:19Z"

@@ -1,0 +1,100 @@
+{
+  "organisation": "AU_Govt_DHA",
+  "name": "lga_settlement_data_2021",
+  "title": "DHA - Settlement Reports - Permanent Settlers by Migration Stream (LGA) July 2020-June 2021",
+  "legal": {
+    "copyrightYear": "2022",
+    "attributionYear": "2022",
+    "attribution": "{datasource.organisationTitle}, ({dataset.attributionYear}): {dataset.title}; accessed from SUDO on {dateOfAccess}.",
+    "clickthrough": false,
+    "licenceType": "Creative Commons Attribution 3.0 Australia (CC BY 3.0 AU)",
+    "copyrightNotice": "&copy; {datasource.organisationTitle} {dataset.copyrightYear}",
+    "suggestedCitation": "{datasource.organisationTitle}, ({dataset.attributionYear}): {dataset.title}; accessed from SUDO on {dateOfAccess}."
+  },
+  "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+  "geoLevel": "lga2011",
+  "key": "lga_code",
+  "keyRegex": null,
+  "availability": "true",
+  "geomField": "geom",
+  "keyword": "HUMAN SOCIETY,Policy and administration,Social policy",
+  "theme": "Demographics",
+  "temporalExtent": {
+    "beginDate": "2020-07-01T00:00:00",
+    "endDate": "2021-06-30T00:00:00",
+    "selectTime": false
+  },
+  "type": "dataset",
+  "_id": "dataset-AU_Govt_DHA-lga_settlement_data_2021-lga2011",
+  "bbox": [
+    112.92,
+    -43.74,
+    153.64,
+    -9.14
+  ],
+  "abstract": "This dataset presents the number of permanent settlers in Australia by migrations streams; humanitarian, family and skilled. The data covers migrating settlers with a Date of Settlement between 01/07/2020 and 30/06/2021. The location data is aggregated based on the Local Government Area (LGA) boundaries of the 2011 Australian Statistical Geography Standard (ASGS).<br/><br/>\n\nThe data in this dataset are sourced from the Settlement Database (SDB). Settlement Date uses a combination of either arrival date or grant date depending on where the settler was when their current SDB visa was granted. If a settler was offshore when their current SDB visa was granted then arrival date is used. If a settler was onshore when their current SDB visa was granted then visa grant date is used. SDB data is compiled from a number of sources including Department of Home Affairs, other Commonwealth agencies and service providers.<br/><br/>\n\nFor more information please visit <a href=\"https://data.gov.au/data/dataset/8d1b90a9-a4d7-4b10-ad6a-8273722c8628\" target=\"_blank\">Data.gov.au</a>.<br/><br/>\n SUDO has spatially enabled the original data with the 2011 LGA boundaries of the <a href=\"https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1259.0.30.001Main+Features1July%202011?OpenDocument\">ABS Australian Standard Geographical Classification (ASGC)</a>. Where the recorded number of settlers is less than 5 (\"<5\" in the original table), it has been set to 4 for confidentiality.",
+  "selectedAttributes": [
+    {
+      "name": "lga_code",
+      "type": "Integer",
+      "title": "Code",
+      "description": "Code.",
+      "stype": "nominal",
+      "isDimension": false
+    },
+    {
+      "name": "lga_name",
+      "type": "String",
+      "title": "Local Government Area",
+      "description": "Local Government Area.",
+      "stype": "nominal",
+      "isDimension": false
+    },
+    {
+      "name": "migration_stream_family",
+      "type": "Integer",
+      "title": "Migration Stream Family",
+      "description": "Migration Stream Family.",
+      "stype": "ratio",
+      "isDimension": false
+    },
+    {
+      "name": "migration_stream_humanitarian_a",
+      "type": "Integer",
+      "title": "Migration Stream Humanitarian (a)",
+      "description": "Migration Stream Humanitarian (a).",
+      "stype": "ratio",
+      "isDimension": false
+    },
+    {
+      "name": "migration_stream_skilled",
+      "type": "Integer",
+      "title": "Migration Stream Skilled",
+      "description": "Migration Stream Skilled.",
+      "stype": "ratio",
+      "isDimension": false
+    }
+  ],
+  "filter": {
+    "filterType": "tabular",
+    "feature": {
+      "key": "lga_code",
+      "geoLevel": "lga2011",
+      "geoField": "ignored",
+      "year": "2006",
+      "featureBbox": [
+        96.81676569599999,
+        -43.740509603,
+        159.109219008,
+        -9.142175977
+      ],
+      "featureType": "country",
+      "featureInstance": "au",
+      "featureName": "Australia",
+      "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+      "prefix": "",
+      "keyTransform": null
+    },
+    "states": []
+  }
+}
